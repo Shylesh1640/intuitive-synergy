@@ -4,10 +4,10 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function Hero() {
   const features = [
-    "AI-powered recommendations",
-    "Dark mode support",
-    "Real-time updates",
-    "Secure authentication"
+    "24/7 AI health consultation",
+    "Symptom analysis & tracking",
+    "Medication reminders",
+    "Secure health data storage"
   ];
 
   return (
@@ -23,18 +23,18 @@ export default function Hero() {
             <span className="inline-block gradient-border px-3 py-1 text-sm font-medium bg-background border border-primary/20">
               <span className="flex items-center">
                 <span className="w-2 h-2 rounded-full bg-primary mr-2 animate-pulse-slow"></span>
-                New AI features available
+                HIPAA Compliant Technology
               </span>
             </span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight gradient-text">
-            Intuitive Design Meets <br/> Powerful Synergy
+            Your AI Healthcare <br/> Assistant
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-8">
-            Experience a seamless platform that adapts to your needs. 
-            Powerful features, beautiful interface, exceptional user experience.
+            Advanced AI-powered healthcare support at your fingertips.
+            Personalized health insights, symptom analysis, and medical guidance.
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
@@ -95,7 +95,7 @@ export default function Hero() {
             <div className="flex space-x-3 text-sm">
               <div className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                <span>1,200+ Users</span>
+                <span>10,000+ Users</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>

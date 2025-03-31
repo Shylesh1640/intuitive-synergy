@@ -7,7 +7,8 @@ import {
   Moon, 
   Sun, 
   Search, 
-  X 
+  X,
+  Heart
 } from 'lucide-react';
 import AuthModal from './AuthModal';
 
@@ -28,7 +29,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Health Tools', href: '#health-tools' },
     { name: 'Resources', href: '#resources' },
     { name: 'About', href: '#about' },
   ];
@@ -46,9 +47,9 @@ export default function Navbar() {
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="font-bold text-white">S</span>
+              <Heart className="h-4 w-4 text-white" />
             </div>
-            <span className="font-bold text-xl">Synergy</span>
+            <span className="font-bold text-xl">HealthAI</span>
           </a>
 
           {/* Desktop Navigation */}

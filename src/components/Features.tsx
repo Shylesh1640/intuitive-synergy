@@ -1,11 +1,11 @@
 
 import { 
   ShieldCheck, 
-  Smartphone, 
-  Zap, 
+  Stethoscope, 
+  Bot, 
   Clock, 
-  Cloud, 
-  Bot 
+  Pill, 
+  Moon
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -13,33 +13,33 @@ export default function Features() {
   const features = [
     {
       icon: <ShieldCheck className="h-6 w-6 text-blue-500" />,
-      title: "Secure Authentication",
-      description: "Multi-factor authentication and OAuth integration provides top-tier security for all user accounts."
+      title: "HIPAA Compliant",
+      description: "Your health data is secure with military-grade encryption and HIPAA-compliant storage systems."
     },
     {
       icon: <Bot className="h-6 w-6 text-purple-500" />,
-      title: "AI Integration",
-      description: "Smart recommendation engine and chatbot for a personalized user experience that learns and adapts."
+      title: "AI Health Analysis",
+      description: "Advanced machine learning algorithms analyze symptoms and provide personalized health insights."
     },
     {
-      icon: <Zap className="h-6 w-6 text-amber-500" />,
-      title: "Real-Time Updates",
-      description: "Instant notifications and live updates ensure you never miss important information."
+      icon: <Clock className="h-6 w-6 text-amber-500" />,
+      title: "24/7 Availability",
+      description: "Access healthcare support anytime, anywhere with our always-on AI assistant technology."
     },
     {
-      icon: <Cloud className="h-6 w-6 text-sky-500" />,
-      title: "Cloud Integration",
-      description: "Seamlessly sync and access your data across all devices with robust cloud infrastructure."
+      icon: <Stethoscope className="h-6 w-6 text-sky-500" />,
+      title: "Symptom Tracking",
+      description: "Monitor health changes over time with comprehensive symptom tracking and analysis."
     },
     {
-      icon: <Smartphone className="h-6 w-6 text-emerald-500" />,
-      title: "Offline Mode",
-      description: "Continue working even with limited connectivity with our robust offline capabilities."
+      icon: <Pill className="h-6 w-6 text-emerald-500" />,
+      title: "Medication Management",
+      description: "Never miss a dose with smart medication reminders and refill notifications."
     },
     {
-      icon: <Clock className="h-6 w-6 text-rose-500" />,
-      title: "Dark Mode",
-      description: "Reduce eye strain and save battery with beautiful dark mode interface that adjusts automatically."
+      icon: <Moon className="h-6 w-6 text-rose-500" />,
+      title: "Wellness Monitoring",
+      description: "Track sleep patterns and wellness metrics to improve your overall health outcomes."
     },
   ];
 
@@ -56,11 +56,11 @@ export default function Features() {
       <div className="container mx-auto">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
-            Powerful Features for Modern Users
+            Intelligent Healthcare Features
           </h2>
           <p className="text-lg text-foreground/80">
-            Our platform combines cutting-edge technology with intuitive design to deliver 
-            a seamless experience that meets all your needs.
+            Our AI healthcare assistant combines advanced technology with medical expertise
+            to provide comprehensive health support tailored to your needs.
           </p>
         </div>
         
@@ -68,7 +68,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="glass-panel p-6 rounded-lg transition-all hover:translate-y-[-4px] hover:shadow-lg"
+              className="glass-panel p-6 rounded-lg transition-all hover:translate-y-[-4px] hover:shadow-lg animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="h-12 w-12 rounded-lg bg-background flex items-center justify-center mb-5">

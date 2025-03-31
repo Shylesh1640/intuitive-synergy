@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { MessageCircle, Send, X, MinusCircle, Loader2 } from 'lucide-react';
+import { MessageCircle, Send, X, MinusCircle, Loader2, Heart } from 'lucide-react';
 
 interface Message {
   id: number;
@@ -18,7 +18,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi there! 👋 I'm your AI assistant. How can I help you today?",
+      text: "Hi there! 👋 I'm your AI healthcare assistant. How can I help with your health questions today?",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -49,14 +49,14 @@ export default function ChatBot() {
     // Simulate AI response after delay
     setTimeout(() => {
       // Add bot response
-      const responses = [
-        "I understand what you're asking for. Let me help you with that!",
-        "That's a great question. Here's what I know about that...",
-        "I'm processing your request. Is there anything specific you'd like to know?",
-        "I can definitely help with that. Let me provide some information.",
-        "Thanks for your question. I'm here to assist you with that topic."
+      const healthResponses = [
+        "I understand your health concern. Based on those symptoms, here's what I can tell you...",
+        "That's a common health question. Here's what medical research suggests...",
+        "I'm analyzing your symptoms. Remember, I'm an AI assistant and not a replacement for professional medical advice.",
+        "I can provide some general health information about that. Here's what you should know...",
+        "Thanks for sharing those details about your health. Let me help you understand what might be happening."
       ];
-      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+      const randomResponse = healthResponses[Math.floor(Math.random() * healthResponses.length)];
       
       const botMessage: Message = {
         id: Date.now(),
@@ -101,11 +101,11 @@ export default function ChatBot() {
           <div className="p-4 border-b border-border/40 flex items-center justify-between bg-primary/5">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <MessageCircle className="h-4 w-4 text-white" />
+                <Heart className="h-4 w-4 text-white" />
               </div>
               <div>
-                <h3 className="font-medium text-sm">AI Assistant</h3>
-                <p className="text-xs text-foreground/70">Always here to help</p>
+                <h3 className="font-medium text-sm">HealthAI Assistant</h3>
+                <p className="text-xs text-foreground/70">Your personal health guide</p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
@@ -158,7 +158,7 @@ export default function ChatBot() {
                     <div className="max-w-[80%] rounded-xl p-3 bg-muted/70">
                       <div className="flex items-center space-x-2">
                         <Loader2 className="h-4 w-4 animate-spin" />
-                        <p className="text-sm">Thinking...</p>
+                        <p className="text-sm">Analyzing health data...</p>
                       </div>
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export default function ChatBot() {
               >
                 <Input
                   type="text"
-                  placeholder="Type your message..."
+                  placeholder="Describe your symptoms or health concern..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="flex-1"
